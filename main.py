@@ -20,6 +20,16 @@ app = FastAPI(
 )
 
 
+# ── Root endpoint ──────────────────────────────────────────────────────────────
+
+@app.get("/")
+async def root():
+    return {
+        "message": "QueueStorm Investigator API",
+        "docs": "/docs",
+        "health": "/health"
+    }
+
 # ── Health check ───────────────────────────────────────────────────────────────
 
 @app.get("/health")
