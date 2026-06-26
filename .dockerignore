@@ -1,0 +1,34 @@
+# Secrets — never bake into an image
+.env
+.env.*
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtualenvs
+.venv
+venv
+env/
+
+# VCS
+.git
+.gitignore
+.gitattributes
+
+# Build / test artifacts
+dist
+build
+.pytest_cache
+.coverage
+htmlcov
+
+# Tooling / scratch
+.puku
+*.pdf
+extracted.txt
+smoke_test.py*
+zz_smoke.*

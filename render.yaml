@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: queuestorm
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false        # set manually in Render dashboard
+      - key: GEMINI_MODEL
+        value: gemini-1.5-flash
+
+    healthCheckPath: /health
+    autoDeploy: true       # redeploys on every push to main
